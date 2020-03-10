@@ -17,6 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('category', 50);
+            $table->enum('type', ['INCOME', 'EXPENSE']);
             $table->string('description')->nullable();
             $table->timestamps();
             $table->softDeletes();

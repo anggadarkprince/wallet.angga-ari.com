@@ -22,7 +22,6 @@ class CreateTransactionsTable extends Migration
             $table->text('description')->nullable();
             $table->string('location')->nullable();
             $table->string('attachment')->nullable();
-            $table->enum('type', ['INCOME', 'EXPENSE']);
             $table->decimal('amount', 20, 2, true);
             $table->timestamps();
             $table->foreign('saving_id')->references('id')->on('savings')
