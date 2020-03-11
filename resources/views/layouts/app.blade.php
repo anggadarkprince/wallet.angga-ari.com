@@ -31,29 +31,29 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         @auth
-                            <li class="nav-item active">
+                            <li class="nav-item{{ preg_match('/^home/', Route::currentRouteName()) ? ' active' : '' }}">
                                 <a class="nav-link" href="{{ '/home' }}">
                                     <i class="mdi mdi-speedometer-slow mr-1"></i>Home <span class="sr-only">(current)</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item{{ preg_match( '/^categories/', Route::currentRouteName()) ? ' active' : '' }}">
                                 <a class="nav-link" href="{{ url('/categories') }}">
                                     <i class="mdi mdi-layers-outline mr-1"></i>Categories
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item{{ preg_match('/^savings/', Route::currentRouteName()) ? ' active' : '' }}">
                                 <a class="nav-link" href="{{ url('/savings') }}">
                                     <i class="mdi mdi-wallet-outline mr-1"></i>Savings
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item{{ preg_match('/^transactions/', Route::currentRouteName()) ? ' active' : '' }}">
                                 <a class="nav-link" href="{{ url('/transactions') }}">
                                     <i class="mdi mdi-shopping-outline mr-1"></i>Transactions
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item{{ preg_match('/^setting/', Route::currentRouteName()) ? ' active' : '' }}">
                                 <a class="nav-link" href="{{ url('/settings') }}">
-                                    <i class="mdi mdi-cog-outline mr-1"></i>Settings
+                                    <i class="mdi mdi-cog-outline mr-1"></i>Setting
                                 </a>
                             </li>
                         @endauth
