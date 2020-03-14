@@ -23,6 +23,7 @@
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
-        "@mdi/font": "^5.0.45"
+        "@mdi/font": "^5.0.45",
+        "bs-custom-file-input": "^1.3.4"
     }
 }
