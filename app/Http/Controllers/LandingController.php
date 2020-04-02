@@ -27,4 +27,15 @@ class LandingController extends Controller
     {
         return view('landing.overview');
     }
+
+    /**
+     * Display a about the app.
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function about(Request $request)
+    {
+        return view('landing.about');
+    }
 }
