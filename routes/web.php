@@ -14,9 +14,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'LandingController@index')->name('landing.index');
+
+Route::name('features')->group(function () {
+    Route::prefix('features')->group(function () {
+        Route::get('/', 'LandingController@features');
+        Route::get('/saving-book', 'LandingController@featuresSaving')->name('.saving');
+        Route::get('/transaction', 'LandingController@featuresTransaction')->name('.transaction');
+        Route::get('/budgeting', 'LandingController@featuresBudgeting')->name('.budgeting');
+        Route::get('/insight', 'LandingController@featuresInsight')->name('.insight');
+    });
 });
+
+Route::get('about', 'LandingController@about')->name('about');
+Route::get('legal-notice', 'LandingController@legal')->name('legal');
+Route::get('privacy-policy', 'LandingController@privacy')->name('privacy');
+Route::get('sla', 'LandingController@sla')->name('sla');
+Route::get('pricing', 'LandingController@pricing')->name('pricing');
+
+Route::get('contact', 'LandingController@contact')->name('contact');
+Route::get('help', 'LandingController@help')->name('help');
+Route::get('brand-asset', 'LandingController@brandAsset')->name('brand-asset');
 
 Auth::routes();
 

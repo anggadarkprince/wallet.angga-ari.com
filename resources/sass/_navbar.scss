@@ -1,0 +1,26 @@
+@import "variables";
+
+.navbar {
+  padding: 20px 1rem;
+}
+.navbar-light {
+  .navbar-nav {
+    .active > .nav-link {
+      color: $teal;
+    }
+
+    .nav-link {
+      color: $body-color-secondary;
+    }
+
+    .nav-item {
+      padding: 0 12px;
+    }
+  }
+
+  .navbar-brand {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: $body-color;
+  }
+}

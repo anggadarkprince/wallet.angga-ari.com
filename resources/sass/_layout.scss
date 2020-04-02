@@ -1,0 +1,91 @@
+@import "variables";
+
+small {
+  line-height: 1.2;
+}
+
+.text-fade {
+  color: $body-color-secondary;
+}
+
+.landing-hero {
+  padding-top: 30px;
+
+  h1 {
+    letter-spacing: -2px;
+  }
+
+  .lead {
+    color: $body-color-secondary;
+  }
+
+  .btn-lg {
+    padding: 17px 40px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .nav-pills {
+    .nav-link {
+      border-radius: 0;
+      background-color: $body-color;
+      color: #ffffff;
+
+      @for $i from 1 through 4 {
+        &.color-tab-#{$i} {
+          background-color: darken(#395066, $i * 4%);
+          &:not(.active):hover {
+            background-color: darken(#395066, $i * 6%);
+          }
+        }
+      }
+
+      i {
+        font-size: 1.5rem;
+      }
+
+      &.active {
+        color: $body-color;
+        background-color: #e2ffe6;
+      }
+    }
+  }
+}
+
+.landing-tab-feature {
+  background-color: #e2ffe6;
+}
+
+.quick-step {
+  i {
+    display: block;
+    transition: transform .2s ease-in-out;
+  }
+
+  &:hover i {
+    transform: scale(1.1) rotate(180deg);
+  }
+}
+
+.footer {
+  .footer-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  h6 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .footer-list a {
+    font-size: 0.9rem;
+    color: $body-color-secondary;
+
+    &:hover {
+      color: $teal;
+    }
+  }
+}

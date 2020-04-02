@@ -1,0 +1,37 @@
+@import "variables";
+
+.btn,
+.nav-link,
+.tab-pane {
+  transition: 0.2s;
+}
+
+.zoom-in {
+  display: block;
+  transition: transform .2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+a {
+  color: $teal;
+}
+
+a:hover {
+  color: darken($teal, 10%);
+  text-decoration: none;
+}
+
+.bg-fade {
+  background-color: #f4f5f7;
+}
+
+.mb-6 {
+  margin-bottom: 4.5rem;
+}
+
+.mb-7 {
+  margin-bottom: 6.5rem;
+}
