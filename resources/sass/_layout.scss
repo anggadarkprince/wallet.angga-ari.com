@@ -12,7 +12,7 @@ small {
   padding-top: 30px;
 
   h1 {
-    letter-spacing: -2px;
+    letter-spacing: -3px;
   }
 
   .lead {
@@ -20,8 +20,8 @@ small {
   }
 
   .btn-lg {
-    padding: 17px 40px;
-    font-size: 22px;
+    padding: 12px 25px;
+    font-size: 18px;
     font-weight: 700;
   }
 
@@ -80,18 +80,52 @@ small {
     text-transform: uppercase;
   }
 
-  .footer-list a {
-    font-size: 0.9rem;
-    color: $body-color-secondary;
+  .footer-list {
+    margin-bottom: 25px;
 
-    &:hover {
-      color: $teal;
+    a {
+      font-size: 0.9rem;
+      color: $body-color-secondary;
+
+      &:hover {
+        color: $teal;
+      }
     }
   }
 }
 
+@media (min-width: 641px) {
+  .landing-hero {
+    h1 {
+      letter-spacing: -2px;
+    }
+    .btn-lg {
+      padding: 17px 40px;
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 0 20px 0 20px;
+
+    .footer-section > li {
+      flex-basis: 50%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .content-wrapper {
-  padding: 25px 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .help-search {

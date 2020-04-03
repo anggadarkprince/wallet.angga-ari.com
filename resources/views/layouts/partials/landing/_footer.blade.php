@@ -55,7 +55,7 @@
                 </ul>
             </div>
         </div>
-        <div class="d-flex justify-content-between">
+        <div class="d-sm-flex justify-content-between">
             <p>&copy {{ date('Y') }} Copyright <a href="{{ url('/') }}">Wallet.app all</a> rights reserved</p>
             <ul class="list-inline">
                 <li class="list-inline-item" title="Language"><i class="mdi mdi-earth text-fade"></i></li>

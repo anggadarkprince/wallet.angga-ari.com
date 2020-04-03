@@ -24,3 +24,17 @@
     color: $body-color;
   }
 }
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-collapse {
+  transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 991px) {
+  .navbar-expand-lg .navbar-nav {
+    padding-top: 20px;
+  }
+}
