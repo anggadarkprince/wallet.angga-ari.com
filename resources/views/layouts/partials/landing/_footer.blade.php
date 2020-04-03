@@ -29,7 +29,7 @@
                     <li class="footer-list">
                         <h6 class="mb-3">{{ __('Resources') }}</h6>
                         <ul class="list-unstyled">
-                            <li><a href="{{ route('help') }}" target="_blank">{{ __('Help center') }}</a></li>
+                            <li><a href="{{ route('help') }}">{{ __('Help center') }}</a></li>
                             <li><a href="{{ route('contact') }}">{{ __('Contact') }}</a></li>
                             <li><a href="{{ route('brand-asset') }}">{{ __('Brand Assets') }}</a></li>
                         </ul>
@@ -39,9 +39,9 @@
                         <h6 class="mb-3">{{ __('Social') }}</h6>
                         <ul class="list-unstyled">
                             <li><a href="https://twitter.com/anggadarkprince" target="_blank">Twitter</a></li>
-                            <li><a href="https://www.linkedin.com/anggadarkprince" target="_blank">Linkedin</a></li>
-                            <li><a href="https://www.instagram.com/anggadarkprince" target="_blank">Instagram</a></li>
-                            <li><a href="https://www.facebook.com/anggadarkprince" target="_blank">Facebook</a></li>
+                            <li><a href="https://linkedin.com/in/angga-ari-wijaya-b9a84486" target="_blank">Linkedin</a></li>
+                            <li><a href="https://instagram.com/anggadarkprince" target="_blank">Instagram</a></li>
+                            <li><a href="https://facebook.com/anggadarkprince" target="_blank">Facebook</a></li>
                         </ul>
                     </li>
 
@@ -58,7 +58,7 @@
         <div class="d-flex justify-content-between">
             <p>&copy {{ date('Y') }} Copyright <a href="{{ url('/') }}">Wallet.app all</a> rights reserved</p>
             <ul class="list-inline">
-                <li class="list-inline-item"><i class="mdi mdi-earth text-fade"></i></li>
+                <li class="list-inline-item" title="Language"><i class="mdi mdi-earth text-fade"></i></li>
                 <li class="list-inline-item">
                     <a href="{{ url('/') }}">English</a>
                 </li>

@@ -14,15 +14,15 @@
             </p>
             <div class="d-flex flex-column align-items-center">
                 @auth
-                    <a href="{{ route('home') }}" class="btn btn-lg btn-primary btn-round mt-3">
+                    <a href="{{ route('home') }}" class="btn btn-lg btn-primary rounded-pill mt-3">
                         <i class="mdi mdi-arrow-left mr-2"></i> {{ __('Back to Dashboard') }}
                     </a>
                 @else
-                    <a href="{{ route('register') }}" class="btn btn-lg btn-teal btn-round mt-3">
+                    <a href="{{ route('register') }}" class="btn btn-lg btn-teal rounded-pill mt-3">
                         {{ __('Try now for free') }}
                     </a>
                 @endauth
-                <a href="{{ url('help-center') }}" class="text-teal mt-4 font-weight-bold d-flex align-items-center text-uppercase">
+                <a href="{{ route('help') }}" class="text-teal mt-4 font-weight-bold d-flex align-items-center text-uppercase">
                     <i class="mdi mdi-help-circle-outline mr-2 text-teal lead"></i> {{ __('Learn More') }}
                 </a>
             </div>
@@ -157,7 +157,7 @@
             </div>
 
             <div class="text-center">
-                <a href="{{ url('features') }}" class="btn btn-primary btn-round">
+                <a href="{{ url('features') }}" class="btn btn-primary rounded-pill">
                     {{ __('Explore all features') }}
                 </a>
             </div>
@@ -235,7 +235,7 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-5 p-md-4">
                     <h2 class="mb-4 font-weight-bold">Share your secure, personalised saving book catalogs with anyone</h2>
-                    <a href="{{ route('features.saving') }}" class="btn btn-lg btn-teal btn-round">More info</a>
+                    <a href="{{ route('features.saving') }}" class="btn btn-lg btn-teal rounded-pill">More info</a>
                 </div>
                 <div class="col-lg-6">
                     <img id="instant-catalog-box-img" src="assets/videos/instant_catalogs.png" alt="Create and share online catalogs">

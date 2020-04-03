@@ -32,7 +32,12 @@ Route::get('privacy-policy', 'LandingController@privacy')->name('privacy');
 Route::get('sla', 'LandingController@sla')->name('sla');
 Route::get('pricing', 'LandingController@pricing')->name('pricing');
 
-Route::get('contact', 'LandingController@contact')->name('contact');
+Route::resource('contact', 'ContactController')->only([
+    'index', 'store'
+])->names([
+    'index' => 'contact',
+    'store' => 'contact.store'
+]);
 Route::get('help', 'LandingController@help')->name('help');
 Route::get('brand-asset', 'LandingController@brandAsset')->name('brand-asset');
 

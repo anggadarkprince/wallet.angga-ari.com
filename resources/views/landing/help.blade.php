@@ -56,6 +56,11 @@
                         </ul>
                     </div>
                 </div>
+
+                <p class="my-5 text-center">
+                    <i class="mdi mdi-help-circle-outline mr-2"></i>Not found what you are looking for? contact
+                    <a href="{{ route('contact') }}">our support</a> here.
+                </p>
             </div>
         </div>
     </div>

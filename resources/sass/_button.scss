@@ -1,9 +1,13 @@
-[class*='btn-outline-']{
+[class*='btn-outline-'] {
   border-width: 2px;
 }
 
-.btn-round {
-  border-radius: 100px;
+.btn-wide {
+  padding: 0.375rem 2rem;
+
+  &.btn-lg {
+    padding: 0.5rem 2.4rem;
+  }
 }
 
 .button-arrow {

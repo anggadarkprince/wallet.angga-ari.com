@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="{{ route('landing.index') }}">
             <img class="mr-2" src="{{ asset('storage/img/logo-wallet.png') }}" width="35" height="35" alt="Logo">
             <span>Wallet.app</span>
         </a>
@@ -33,8 +33,8 @@
                         {{ __('Resources') }} <i class="mdi mdi-chevron-down d-inline-block align-middle"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item{{ request()->is('contact') ? ' active' : '' }}" href="{{ route('contact') }}">{{ __('Contact') }}</a>
                         <a class="dropdown-item{{ request()->is('help') ? ' active' : '' }}" href="{{ route('help') }}">{{ __('Help') }}</a>
+                        <a class="dropdown-item{{ request()->is('contact') ? ' active' : '' }}" href="{{ route('contact') }}">{{ __('Contact') }}</a>
                         <a class="dropdown-item{{ request()->is('brand-asset') ? ' active' : '' }}" href="{{ route('brand-asset') }}">{{ __('Brand Asset') }}</a>
                     </div>
                 </li>
@@ -71,7 +71,7 @@
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a href="{{ route('register') }}" class="btn btn-outline-teal btn-round my-2 ml-md-2 px-3 my-sm-0">
+                                <a href="{{ route('register') }}" class="btn btn-outline-teal rounded-pill my-2 ml-md-2 px-3 my-sm-0">
                                     {{ __('Get Started') }}
                                 </a>
                             </li>

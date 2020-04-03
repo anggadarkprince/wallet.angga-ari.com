@@ -17,7 +17,7 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link rel="icon" type="image/png" href="{{ asset('storage/img/logo-wallet.png') }}">
 </head>
-<body>
+<body class="bg-white">
 @include('layouts.partials.landing._navbar')
 
 @yield('content')

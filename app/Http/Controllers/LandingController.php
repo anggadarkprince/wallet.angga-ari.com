@@ -93,4 +93,15 @@ class LandingController extends Controller
     {
         return view('landing.help');
     }
+
+    /**
+     * Display a help the app.
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function brandAsset(Request $request)
+    {
+        return view('landing.brand');
+    }
 }
