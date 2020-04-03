@@ -13,16 +13,16 @@
                 <li class="nav-item{{ request()->is('/') ? ' active' : '' }}">
                     <a class="nav-link" href="{{ route('landing.index') }}">{{ __('Home') }} <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown{{ request()->is('features') ? ' active' : '' }}">
+                <li class="nav-item dropdown{{ request()->is('features*') ? ' active' : '' }}">
                     <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ __('Features') }} <i class="mdi mdi-chevron-down d-inline-block align-middle"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('features') }}">{{ __('Overview') }}</a>
-                        <a class="dropdown-item" href="{{ route('features.saving') }}">{{ __('Saving Book') }}</a>
-                        <a class="dropdown-item" href="{{ route('features.transaction') }}">{{ __('Organize Transactions') }}</a>
-                        <a class="dropdown-item" href="{{ route('features.budgeting') }}">{{ __('Control Expanses') }}</a>
-                        <a class="dropdown-item" href="{{ route('features.insight') }}">{{ __('Invest Your Coin') }}</a>
+                        <a class="dropdown-item{{ request()->is('features') ? ' active' : '' }}" href="{{ route('features') }}">{{ __('Overview') }}</a>
+                        <a class="dropdown-item{{ Route::currentRouteName() == 'features.saving' ? ' active' : '' }}" href="{{ route('features.saving') }}">{{ __('Saving Book') }}</a>
+                        <a class="dropdown-item{{ Route::currentRouteName() == 'features.transaction' ? ' active' : '' ? ' active' : '' }}" href="{{ route('features.transaction') }}">{{ __('Organize Transactions') }}</a>
+                        <a class="dropdown-item{{ Route::currentRouteName() == 'features.budgeting' ? ' active' : '' ? ' active' : '' }}" href="{{ route('features.budgeting') }}">{{ __('Control Expanses') }}</a>
+                        <a class="dropdown-item{{ Route::currentRouteName() == 'features.insight' ? ' active' : '' ? ' active' : '' }}" href="{{ route('features.insight') }}">{{ __('Invest Your Coin') }}</a>
                     </div>
                 </li>
                 <li class="nav-item{{ request()->is('pricing') ? ' active' : '' }}">
@@ -33,9 +33,9 @@
                         {{ __('Resources') }} <i class="mdi mdi-chevron-down d-inline-block align-middle"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('help') }}">{{ __('Help') }}</a>
-                        <a class="dropdown-item" href="{{ route('contact') }}">{{ __('Contact') }}</a>
-                        <a class="dropdown-item" href="{{ route('brand-asset') }}">{{ __('Brand Asset') }}</a>
+                        <a class="dropdown-item{{ request()->is('contact') ? ' active' : '' }}" href="{{ route('contact') }}">{{ __('Contact') }}</a>
+                        <a class="dropdown-item{{ request()->is('help') ? ' active' : '' }}" href="{{ route('help') }}">{{ __('Help') }}</a>
+                        <a class="dropdown-item{{ request()->is('brand-asset') ? ' active' : '' }}" href="{{ route('brand-asset') }}">{{ __('Brand Asset') }}</a>
                     </div>
                 </li>
                 <li class="nav-item{{ request()->is('about') ? ' active' : '' }}">

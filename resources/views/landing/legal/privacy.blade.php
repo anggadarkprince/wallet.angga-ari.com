@@ -2,7 +2,7 @@
 
 @section('content')
     <article class="container mt-4">
-        <h3>Privacy Policy of Wallet.app</h3>
+        <h3>Privacy Policy of {{ config('app.name') }}</h3>
         <p class="text-fade">Last updated 20 April 2020</p>
 
         <p>

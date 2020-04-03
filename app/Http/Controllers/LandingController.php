@@ -25,7 +25,18 @@ class LandingController extends Controller
      */
     public function features(Request $request)
     {
-        return view('landing.overview');
+        return view('landing.features.overview');
+    }
+
+    /**
+     * Display a landing page index.
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function featuresSaving(Request $request)
+    {
+        return view('landing.features.saving-book');
     }
 
     /**
@@ -45,9 +56,9 @@ class LandingController extends Controller
      * @param Request $request
      * @return void
      */
-    public function legal(Request $request)
+    public function disclaimer(Request $request)
     {
-        return view('landing.legal');
+        return view('landing.legal.disclaimer');
     }
 
     /**
@@ -58,6 +69,28 @@ class LandingController extends Controller
      */
     public function privacy(Request $request)
     {
-        return view('landing.privacy');
+        return view('landing.legal.privacy');
+    }
+
+    /**
+     * Display a service level agreement the app.
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function sla(Request $request)
+    {
+        return view('landing.legal.sla');
+    }
+
+    /**
+     * Display a help the app.
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function help(Request $request)
+    {
+        return view('landing.help');
     }
 }

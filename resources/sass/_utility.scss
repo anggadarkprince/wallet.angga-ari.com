@@ -17,6 +17,10 @@
 
 a {
   color: $teal;
+
+  &.text-link {
+    color: $body-color;
+  }
 }
 
 a:hover {
@@ -34,4 +38,20 @@ a:hover {
 
 .mb-7 {
   margin-bottom: 6.5rem;
+}
+
+ol {
+  counter-reset: item;
+  position: relative;
+
+  li {
+    display: block;
+
+    &:before {
+      content: counters(item, ".") " ";
+      counter-increment: item;
+      position: absolute;
+      left: 0;
+    }
+  }
 }

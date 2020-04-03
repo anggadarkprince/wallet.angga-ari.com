@@ -10,9 +10,9 @@
                         <h6 class="mb-3">{{ __('About') }}</h6>
                         <ul class="list-unstyled">
                             <li><a href="{{ route('about') }}">{{ __('What is Wallet.app') }}</a></li>
-                            <li><a href="{{ route('legal') }}">{{ __('Legal Notice') }}</a></li>
+                            <li><a href="{{ route('disclaimer') }}">{{ __('Legal Notice') }}</a></li>
                             <li><a href="{{ route('privacy') }}">{{ __('Privacy policy') }}</a></li>
-                            <li><a href="{{ route('sla') }}" target="_blank">{{ __('SLA') }}</a></li>
+                            <li><a href="{{ route('sla') }}">{{ __('SLA') }}</a></li>
                         </ul>
                     </li>
 

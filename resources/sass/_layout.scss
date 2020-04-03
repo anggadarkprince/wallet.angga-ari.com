@@ -89,3 +89,25 @@ small {
     }
   }
 }
+
+.content-wrapper {
+  padding: 25px 0;
+}
+
+.help-search {
+  background-color: lighten($gray-200, 3%);
+  border-top: 1px solid $gray-300;
+  border-bottom: 1px solid $gray-300;
+  padding: 35px 0;
+
+  input {
+    font-size: 1.1rem;
+    border-radius: 40px;
+    height: calc(1.5em + 1.5rem + 2px);
+  }
+
+  .btn {
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+}

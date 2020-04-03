@@ -27,7 +27,7 @@ Route::name('features')->group(function () {
 });
 
 Route::get('about', 'LandingController@about')->name('about');
-Route::get('legal-notice', 'LandingController@legal')->name('legal');
+Route::get('legal-notice', 'LandingController@disclaimer')->name('disclaimer');
 Route::get('privacy-policy', 'LandingController@privacy')->name('privacy');
 Route::get('sla', 'LandingController@sla')->name('sla');
 Route::get('pricing', 'LandingController@pricing')->name('pricing');
