@@ -10,7 +10,7 @@
 
         <div class="collapse navbar-collapse" id="navbar-landing-menu">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item{{ request()->is('/') ? ' active' : '' }}">
+                <li class="nav-item{{ request()->is(App::getLocale()) ? ' active' : '' }}">
                     <a class="nav-link" href="{{ route('landing.index') }}">{{ __('Home') }} <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown{{ request()->is('features*') ? ' active' : '' }}">
@@ -25,20 +25,20 @@
                         <a class="dropdown-item{{ Route::currentRouteName() == 'features.insight' ? ' active' : '' ? ' active' : '' }}" href="{{ route('features.insight') }}">{{ __('Invest Your Coin') }}</a>
                     </div>
                 </li>
-                <li class="nav-item{{ request()->is('pricing') ? ' active' : '' }}">
-                    <a class="nav-link" href="#">{{ __('Pricing') }}</a>
+                <li class="nav-item{{ request()->is(App::getLocale() . '/pricing') ? ' active' : '' }}">
+                    <a class="nav-link" href="{{ route('pricing') }}">{{ __('Pricing') }}</a>
                 </li>
-                <li class="nav-item dropdown{{ request()->is('contact') || request()->is('help') || request()->is('brand-asset') ? ' active' : '' }}">
+                <li class="nav-item dropdown{{ request()->is(App::getLocale() . '/contact') || request()->is(App::getLocale() . '/help') || request()->is(App::getLocale() . '/brand-asset') ? ' active' : '' }}">
                     <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ __('Resources') }} <i class="mdi mdi-chevron-down d-inline-block align-middle"></i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item{{ request()->is('help') ? ' active' : '' }}" href="{{ route('help') }}">{{ __('Help') }}</a>
-                        <a class="dropdown-item{{ request()->is('contact') ? ' active' : '' }}" href="{{ route('contact') }}">{{ __('Contact') }}</a>
-                        <a class="dropdown-item{{ request()->is('brand-asset') ? ' active' : '' }}" href="{{ route('brand-asset') }}">{{ __('Brand Asset') }}</a>
+                        <a class="dropdown-item{{ request()->is(App::getLocale() . '/help') ? ' active' : '' }}" href="{{ route('help') }}">{{ __('Help') }}</a>
+                        <a class="dropdown-item{{ request()->is(App::getLocale() . '/contact') ? ' active' : '' }}" href="{{ route('contact') }}">{{ __('Contact') }}</a>
+                        <a class="dropdown-item{{ request()->is(App::getLocale() . '/brand-asset') ? ' active' : '' }}" href="{{ route('brand-asset') }}">{{ __('Brand Asset') }}</a>
                     </div>
                 </li>
-                <li class="nav-item{{ request()->is('about') ? ' active' : '' }}">
+                <li class="nav-item{{ request()->is(App::getLocale() . '/about') ? ' active' : '' }}">
                     <a class="nav-link" href="{{ route('about') }}">{{ __('About') }}</a>
                 </li>
                 @if (Route::has('login'))

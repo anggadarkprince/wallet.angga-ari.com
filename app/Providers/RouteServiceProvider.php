@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
@@ -30,7 +31,22 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Id constraint pattern
+        Route::pattern('id', '[0-9]+');
+
+        // Specify available languages for routes, set constraint rule.
+        Route::pattern('locale', implode('|', ['id', 'en']));
+
+        Route::matched(function (RouteMatched $event) {
+            // Get language from route.
+            $locale = $event->route->parameter('locale', config('app.locale'));
+
+            // Ensure, that all built urls would have "locale" parameter set from url.
+            url()->defaults(array('locale' => $locale));
+
+            // Change application locale.
+            app()->setLocale($locale);
+        });
 
         parent::boot();
     }
@@ -58,9 +74,11 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
+        // Added "->prefix(...` line to auto-prefix all routes with locale.
         Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+            ->namespace($this->namespace)
+            ->prefix('{locale}')
+            ->group(base_path('routes/web.php'));
     }
 
     /**

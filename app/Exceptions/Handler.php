@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -50,6 +51,21 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        // When we've got non-matched route resulting in "404 Not Found" response.
+        if ($exception instanceof NotFoundHttpException) {
+            $config = app('config');
+            $defaultLocale = $config['app.locale'];
+            $locale = $request->segment(1);
+
+            // See if locale in url is absent or isn't among known languages.
+            if (!in_array($locale, ['id', 'en'])) {
+                // Redirect to same url with default locale prepended.
+                $uri = $request->getUriForPath('/' . $defaultLocale . $request->getPathInfo());
+
+                return redirect($uri, 301);
+            }
+        }
+
         return parent::render($request, $exception);
     }
 }

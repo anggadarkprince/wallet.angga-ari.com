@@ -60,7 +60,7 @@
             <ul class="list-inline">
                 <li class="list-inline-item" title="Language"><i class="mdi mdi-earth text-fade"></i></li>
                 <li class="list-inline-item">
-                    <a href="{{ url('/') }}">English</a>
+                    <a href="{{ url('/en') }}">English</a>
                 </li>
                 <li class="list-inline-item border-right">
                     &nbsp;
