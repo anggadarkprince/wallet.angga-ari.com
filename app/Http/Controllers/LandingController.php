@@ -38,4 +38,26 @@ class LandingController extends Controller
     {
         return view('landing.about');
     }
+
+    /**
+     * Display a legal notice the app.
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function legal(Request $request)
+    {
+        return view('landing.legal');
+    }
+
+    /**
+     * Display a privacy policy the app.
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function privacy(Request $request)
+    {
+        return view('landing.privacy');
+    }
 }
