@@ -2,7 +2,7 @@
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="{{ route('landing.index') }}">
             <img class="mr-2" src="{{ asset('storage/img/logo-wallet.png') }}" width="35" height="35" alt="Logo">
-            <span>Wallet.app</span>
+            <span>{{ config('app.name') }}</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-landing-menu" aria-controls="navbar-landing-menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item{{ request()->is(App::getLocale() . '/help') ? ' active' : '' }}" href="{{ route('help') }}">{{ __('Help') }}</a>
                         <a class="dropdown-item{{ request()->is(App::getLocale() . '/contact') ? ' active' : '' }}" href="{{ route('contact') }}">{{ __('Contact') }}</a>
-                        <a class="dropdown-item{{ request()->is(App::getLocale() . '/brand-asset') ? ' active' : '' }}" href="{{ route('brand-asset') }}">{{ __('Brand Asset') }}</a>
+                        <a class="dropdown-item{{ request()->is(App::getLocale() . '/brand-asset') ? ' active' : '' }}" href="{{ route('brand-asset') }}">{{ __('Brand Assets') }}</a>
                     </div>
                 </li>
                 <li class="nav-item{{ request()->is(App::getLocale() . '/about') ? ' active' : '' }}">

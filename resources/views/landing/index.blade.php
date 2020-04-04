@@ -8,7 +8,7 @@
                 {{ __('One stop control of your money') }}
             </h1>
             <p class="lead">
-                {{ __('This app tacks your credit and debit transaction') }}
+                {{ __('This app tracks your credit and debit transaction') }}
                 <br>
                 {{ __('Organize your money into specific account and saving plan') }}.
             </p>
@@ -23,7 +23,7 @@
                     </a>
                 @endauth
                 <a href="{{ route('help') }}" class="text-teal mt-4 font-weight-bold d-flex align-items-center text-uppercase">
-                    <i class="mdi mdi-help-circle-outline mr-2 text-teal lead"></i> {{ __('Learn More') }}
+                    <i class="mdi mdi-help-circle-outline mr-2 text-teal lead"></i> {{ __('Learn more') }}
                 </a>
             </div>
         </div>
@@ -191,7 +191,7 @@
                 <h2 class="mb-3">Quality Score</h2>
                 <p class="text-fade">Track the evolution of the quality of your product information with our graphic reports. Enrich your product information automatically and improve the ranking of your product listings. All this in clear, visual charts and graphics.</p>
                 <a href="{{ url('features/insight') }}" class="button-arrow">
-                    Show more
+                    {{ __('Show more') }}
                 </a>
             </div>
             <div class="col-md-6">
@@ -206,7 +206,7 @@
                 <h2 class="color-blue">Track your changes</h2>
                 <p>Keep track of users’ daily activity. Check the dates and authoring of each change made. Retrieve previous versions to recover any changes.</p>
                 <a href="{{ route('features.transaction') }}" class="button-arrow">
-                    Show more
+                    {{ __('Show more') }}
                 </a>
             </div>
             <div class="col-md-6 margin-illustration">
@@ -221,7 +221,7 @@
                 <h2 class="mb-3">Flexibility</h2>
                 <p class="text-fade">Catalogs are living content and require constant updates. With Sales Layer a wide range of options are at your fingertips: customize data sheets, use pre-designed formulas, bulk edit... in up to 156 different languages.</p>
                 <a href="{{ route('features.budgeting') }}" class="button-arrow">
-                    Show more
+                    {{ __('Show more') }}
                 </a>
             </div>
             <div class="col-md-6">
@@ -234,8 +234,8 @@
         <div class="p-5 bg-fade">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-5 p-md-4">
-                    <h2 class="mb-4 font-weight-bold">Share your secure, personalised saving book catalogs with anyone</h2>
-                    <a href="{{ route('features.saving') }}" class="btn btn-lg btn-teal rounded-pill">More info</a>
+                    <h2 class="mb-4 font-weight-bold">{{ __('Share your secure, personalised saving book catalogs with anyone') }}</h2>
+                    <a href="{{ route('features.saving') }}" class="btn btn-lg btn-teal rounded-pill">{{ __('More info') }}</a>
                 </div>
                 <div class="col-lg-6">
                     <img id="instant-catalog-box-img" src="assets/videos/instant_catalogs.png" alt="Create and share online catalogs">

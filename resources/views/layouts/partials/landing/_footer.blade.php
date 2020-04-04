@@ -9,7 +9,7 @@
                     <li class="footer-list">
                         <h6 class="mb-3">{{ __('About') }}</h6>
                         <ul class="list-unstyled">
-                            <li><a href="{{ route('about') }}">{{ __('What is Wallet.app') }}</a></li>
+                            <li><a href="{{ route('about') }}">{{ __('What is :app', ['app' => config('app.name')]) }}</a></li>
                             <li><a href="{{ route('disclaimer') }}">{{ __('Legal Notice') }}</a></li>
                             <li><a href="{{ route('privacy') }}">{{ __('Privacy policy') }}</a></li>
                             <li><a href="{{ route('sla') }}">{{ __('SLA') }}</a></li>
@@ -17,7 +17,7 @@
                     </li>
 
                     <li class="footer-list">
-                        <h6 class="mb-3">{{ __('Legal Notice') }}Wallet</h6>
+                        <h6 class="mb-3">{{ __('Wallet') }}</h6>
                         <ul class="list-unstyled">
                             <li><a href="{{ route('features') }}">{{ __('Features') }}</a></li>
                             <li><a href="{{ route('features.transaction') }}">{{ __('Transaction') }}</a></li>
@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="d-sm-flex justify-content-between">
-            <p>&copy {{ date('Y') }} Copyright <a href="{{ url('/') }}">Wallet.app all</a> rights reserved</p>
+            <p>&copy {{ date('Y') }} Copyright <a href="{{ url('/') }}">{{ config('app.name') }} all</a> rights reserved</p>
             <ul class="list-inline">
                 <li class="list-inline-item" title="Language"><i class="mdi mdi-earth text-fade"></i></li>
                 <li class="list-inline-item">

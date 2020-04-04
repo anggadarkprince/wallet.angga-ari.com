@@ -6,10 +6,10 @@
             <form action="help" method="get">
                 <div class="input-group">
                     <input type="search" name="q" id="q" class="form-control form-control-lg"
-                           placeholder="Have a question? Ask or enter a search term." value="{{ request()->get('q') }}">
+                           placeholder="{{ __('Have a question? Ask or enter a search term.') }}" value="{{ request()->get('q') }}">
                     <div class="input-group-append">
                         <button class="btn btn-teal btn-lg" type="button">
-                            <i class="mdi mdi-magnify mr-2"></i>Search
+                            <i class="mdi mdi-magnify mr-2"></i> {{ __('Search') }}
                         </button>
                     </div>
                 </div>
@@ -20,7 +20,7 @@
     <div class="container content-wrapper">
         <div class="row">
             <div class="col-lg-10 mx-auto">
-                <h4 class="mb-4">Article Categories</h4>
+                <h4 class="mb-4">{{ __('Article Categories') }}</h4>
                 <hr>
                 <div class="row">
                     <div class="col-md-6">
@@ -58,7 +58,7 @@
                 </div>
 
                 <p class="my-5 text-center">
-                    <i class="mdi mdi-help-circle-outline mr-2"></i>Not found what you are looking for? contact
+                    <i class="mdi mdi-help-circle-outline mr-2"></i>{{ __('Not found what you are looking for?') }} contact
                     <a href="{{ route('contact') }}">our support</a> here.
                 </p>
             </div>
