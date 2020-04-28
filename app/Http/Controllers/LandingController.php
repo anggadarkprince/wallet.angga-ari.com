@@ -52,6 +52,17 @@ class LandingController extends Controller
     }
 
     /**
+     * Display a pricing table.
+     *
+     * @param Request $request
+     * @return void
+     */
+    public function pricing(Request $request)
+    {
+        return view('landing.pricing');
+    }
+
+    /**
      * Display a legal notice the app.
      *
      * @param Request $request

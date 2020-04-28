@@ -22,6 +22,34 @@
   "Transaction Data": "Data Transaksi",
   "Monthly Budgeting": "Penganggaran Bulanan",
   "Investing Future": "Investasi Masa Depan",
+
+  "Multiple Saving Books": "Multi Buku Tabungan",
+  "Shared, independent, transparent saving account. Give you freedom of personal finance management and do whatever you want.": "Berbagi, aman, transparan akun tabungan. Memberimu kebebasan managemen keuangan pribadi dan lakukan apapun yang kamu mau.",
+  "Multiple Data Saving": "Multi Data Tabungan",
+  "Independent Transactions": "Transaksi Mandiri",
+  "Shared Saving Book": "Berbagi Buku Tabungan",
+  "Encrypted Feature Access": "Akses Fitur Terenkripsi",
+
+  "Track Your Transaction": "Ikuti Transaksimu",
+  "Capture every movement of your transaction in every categories of accounts. Give you raw balance and feel free to organize your money into effective cash flow.": "Simpan setiap perpindahan transaksimu disetiap akun dan kategori. Memberimu saldo transparan dan bebas untuk mengatur uangmu dalam aliran kas yang efektif.",
+  "Grouping Categories": "Pengelompokan Jenis",
+  "Capture Location": "Menyimpan Lokasi",
+  "Multiple Attachment": "Multi Lampiran",
+  "Carry-over Balance": "Saldo Berkelanjutan",
+
+  "Set Budget Periodically": "Set Pendanaan Periodik",
+  "Keep your money on track. Distribute every coin into right account and remind the limit. This is a control of what you want to bring you awareness of transaction activity.": "Biarkan uangmu tetap terpantau. Distribusikan uangmu ke dalam kategori yang tepat. Ini adalah kontrol untuk membuatmu sadar terhadap transaksimu.",
+  "Monthly Limit": "Batasan Bulanan",
+  "Category Budgeting": "Kategori Pendanaan",
+  "Distribution Calculation": "Perhitungan Distribusi",
+
+  "Plan Your Money": "Rencanakan Uangmu",
+  "Learn your curve balance each period to see your future wealth. Give you deep insight about your pass transaction and give you calculation of your improvement.": "Pelajari kurva saldomu setiap periode untuk melihat kekayaanmu dimasa depan. Memberikanmu pemahaman mendalam tentang transaksi yang lalu.",
+  "Future Plan": "Rencana Masa Depan",
+  "Saving Reminder": "Pengingat Menabung",
+  "Saving Goal Control": "Kontrol Target Tabungan",
+  "Intuitive Insight": "Laporan Intuitif",
+
   "Explore all features": "Jelajahi semua fitur",
   "Create your transaction, as easy as copy-paste": "Buat transaksimu, semudah copy-paste",
   "Step One": "Langkah Pertama",
@@ -31,10 +59,14 @@
   "Step Three": "Langkah Ketiga",
   "Done! Your transaction record is in the cloud. You can manage your cash flow even with your partner.": "Selesai! Transaksi datamu sudah di awan. Kamu dapat mengatur aliran kas bahkan dengan temanmu.",
   "Share your secure, personalised saving book catalogs with anyone": "Bagikan katalog buku tabungan secara aman dan pribadi dengan siapapun",
-  "Discover the magic of the App with our product management consultants": "Temukan keajaiban aplkasi dengan konsultan manajemen kami",
+  "Discover the magic of the App with our product management consultants": "Temukan keajaiban aplikasi dengan konsultan manajemen kami",
   "Learn how a :app can fit your personal financial": "Pelajari bagaimana :app sangat cocok untuk pengelolaan keuangan pribadi",
   "Show more": "Tampilkan lebih banyak",
   "More info": "Informasi lebih lanjut",
+
+  "Saving Score": "Nilai Tabungan",
+  "Track Your Changes": "Ikuti Setiap Perubahan",
+  "Flexibility": "Fleksibilitas",
 
   ":app is simple, sophisticated, secure personal financial manager": ":app pengelola keuangan pribadi mudah, canggih, aman",
   "Wealthiness comes from right control and decision": "Kekayaan datang dari kontrol dan keputusan yang benar",
@@ -56,8 +88,11 @@
   "If you have any question and need further assistance about our service, please don't hesitate to get in touch with us.": "Jika kamu punya pertanyaan dan butuh bantuan lebih tentang layanan kami, jangan ragu untuk menghubungi kami",
   "Full name": "Nama lengkap",
   "Email address": "Alamat email",
+  "Password": "Kata kunci",
   "Message": "Pesan",
   "Submit": "Kirim",
+  "Remember me": "Ingat Aku",
+  "Forgot password?": "Lupa password?",
 
   "Download": "Unduh",
   "We have copyright of images or any resources that downloadable below.": "Kami punya hak cipta dari gambar atau semua hal lain yang bisa di unduh di bawah.",
@@ -73,5 +108,22 @@
   "Help center": "Pusat bantuan",
   "Contact": "Kontak",
   "Brand Assets": "Aset merek",
-  "Social": "Sosial media"
+  "Social": "Sosial media",
+
+  "Choose you subscription": "Pilih layanan berbayarmu",
+  "Below is our simple, cheap and transparent premium member, no hidden surprise charges.": "Di bawah ini layanan pemium kami yang sederhana, murah dan transparan, tidak ada tagihan tersembunyi.",
+  "Basic Plan": "Dasar",
+  "Free Forever": "Gratis Terus",
+  "Transactions / Mo": "Transaksi / Bln",
+  "No location": "Tanpa lokasi",
+  "No attachment": "Tanpa lampiran",
+  "Contain ads": "Berisi iklan",
+
+  "Small plan": "Kecil",
+  "Capture location": "Menyimpan lokasi",
+  "Transactions": "Transaksi",
+
+  "Premium plan": "Premium",
+  "Include attachment": "Termasuk Lampiran",
+  "No ads": "Tanpa Iklan"
 }

@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="content-wrapper text-center">
-            <p class="lead text-fade">{{ config('app.name') }} {{ __(':app is created by', ['app' => config('app.name')]) }}</p>
+            <p class="lead text-fade">{{ __(':app is created by', ['app' => config('app.name')]) }}</p>
             <img src="{{ asset('storage/img/author.jpg') }}" alt="Author" class="rounded-circle mb-3" style="width: 150px">
             <h3>Angga Ari Wijaya</h3>
             <p class="text-fade">Full stack developer</p>

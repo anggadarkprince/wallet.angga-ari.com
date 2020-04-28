@@ -23,10 +23,11 @@ $teal: #4CB58E;
 $teal2: #4dc0b5;
 $cyan: #6cb2eb;
 
-$theme-colors: (
-    "teal": $teal
-);
 $body-color: #34495e;
 $body-color-secondary: #8897a6;
 $component-active-bg: $teal;
 $input-placeholder-color: $body-color-secondary;
+$theme-colors: (
+    "teal": $teal,
+    "fade": $body-color-secondary,
+);

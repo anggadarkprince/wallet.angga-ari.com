@@ -144,7 +144,7 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <ul>
-                                        <li>{{ __('Saving Plan') }}</li>
+                                        <li>{{ __('Future Plan') }}</li>
                                         <li>{{ __('Saving Reminder') }}</li>
                                         <li>{{ __('Saving Goal Control') }}</li>
                                         <li>{{ __('Intuitive Insight') }}</li>
@@ -188,8 +188,8 @@
     <div class="container mb-7">
         <div class="row justify-content-between align-items-center">
             <div class="col-md-5">
-                <h2 class="mb-3">Quality Score</h2>
-                <p class="text-fade">Track the evolution of the quality of your product information with our graphic reports. Enrich your product information automatically and improve the ranking of your product listings. All this in clear, visual charts and graphics.</p>
+                <h2 class="mb-3">{{ __('Saving Score') }}</h2>
+                <p class="text-fade">{{ __('landing.saving') }}</p>
                 <a href="{{ url('features/insight') }}" class="button-arrow">
                     {{ __('Show more') }}
                 </a>
@@ -203,8 +203,8 @@
     <div class="container mb-7">
         <div class="row justify-content-between align-items-center flex-row-reverse">
             <div class="col-md-5">
-                <h2 class="color-blue">Track your changes</h2>
-                <p>Keep track of users’ daily activity. Check the dates and authoring of each change made. Retrieve previous versions to recover any changes.</p>
+                <h2 class="color-blue">{{ __('Track Your Changes') }}</h2>
+                <p class="text-fade">{{ __('landing.tracking') }}</p>
                 <a href="{{ route('features.transaction') }}" class="button-arrow">
                     {{ __('Show more') }}
                 </a>
@@ -218,8 +218,8 @@
     <div class="container mb-7">
         <div class="row justify-content-between align-items-center">
             <div class="col-md-5">
-                <h2 class="mb-3">Flexibility</h2>
-                <p class="text-fade">Catalogs are living content and require constant updates. With Sales Layer a wide range of options are at your fingertips: customize data sheets, use pre-designed formulas, bulk edit... in up to 156 different languages.</p>
+                <h2 class="mb-3">{{ __('Flexibility') }}</h2>
+                <p class="text-fade">{{ __('landing.flexible') }}</p>
                 <a href="{{ route('features.budgeting') }}" class="button-arrow">
                     {{ __('Show more') }}
                 </a>
