@@ -7,25 +7,21 @@
             <div class="card border-0 shadow-lg">
                 <div class="card-body px-5 py-4">
                     <div class="text-center mb-3">
-                        <h3 class="mb-0">{{ __('Login') }}</h3>
+                        <h3 class="mb-0">{{ __('Login now') }}</h3>
                         <p class="text-fade">Start capture transaction easy way</p>
                     </div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group">
-                            <label for="email">
-                                {{ __('Email address') }}
-                            </label>
+                            <label for="email">{{ __('Email address') }}</label>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                                    placeholder="Your email address" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                             @error('email') <span class="invalid-feedback" role="alert">{{ $message }}</span> @enderror
                         </div>
 
                         <div class="form-group">
-                            <label for="password">
-                                {{ __('Password') }}
-                            </label>
+                            <label for="password">{{ __('Password') }}</label>
                             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
                                    placeholder="Your password" name="password" required autocomplete="current-password">
                             @error('password') <span class="invalid-feedback" role="alert">{{ $message }}</span> @enderror
@@ -51,7 +47,10 @@
                                 {{ __('Login') }}
                             </button>
                         </div>
-                        <p class="text-center">Don't have an account? <a href="{{ route('register') }}">Register now</a></p>
+
+                        <p class="text-center">
+                            {{ __("Don't have an account?") }} <a href="{{ route('register') }}">{{ __('Register now') }}</a>
+                        </p>
                     </form>
                 </div>
             </div>

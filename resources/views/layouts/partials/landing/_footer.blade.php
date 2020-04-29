@@ -60,13 +60,17 @@
             <ul class="list-inline">
                 <li class="list-inline-item" title="Language"><i class="mdi mdi-earth text-fade"></i></li>
                 <li class="list-inline-item">
-                    <a href="{{ route(if_empty(Route::currentRouteName(), 'landing.index'), ['locale' => 'en']) }}">English</a>
+                    <a href="{{ request()->getUriForPath('/en' . substr(request()->getPathInfo(), 3)) }}">
+                        English
+                    </a>
                 </li>
                 <li class="list-inline-item border-right">
                     &nbsp;
                 </li>
                 <li class="list-inline-item">
-                    <a href="{{ route(if_empty(Route::currentRouteName(), 'landing.index'), ['locale' => 'id']) }}">Indonesia</a>
+                    <a href="{{ request()->getUriForPath('/id' . substr(request()->getPathInfo(), 3)) }}">
+                        Indonesia
+                    </a>
                 </li>
             </ul>
         </div>

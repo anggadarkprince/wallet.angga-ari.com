@@ -41,13 +41,13 @@ Route::resource('contact', 'ContactController')->only([
 Route::get('help', 'LandingController@help')->name('help');
 Route::get('brand-asset', 'LandingController@brandAsset')->name('brand-asset');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::middleware('auth')->group(function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('categories', 'CategoriesController');
-    Route::resource('savings', 'SavingsController');
+    Route::resource('savings', 'SavingsController')->middleware(['verified']);
     Route::resource('transactions', 'TransactionsController');
-    Route::get('/account', 'AccountController@index')->name('account');
-    Route::post('/account', 'AccountController@update')->name('account.update');
+    Route::get('/account', 'AccountController@index')->name('account')->middleware(['verified', 'password.confirm']);
+    Route::post('/account', 'AccountController@update')->name('account.update')->middleware(['verified', 'password.confirm']);
 });
