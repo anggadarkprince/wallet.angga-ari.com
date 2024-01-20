@@ -36,7 +36,7 @@ class Transaction extends Model
 
     public function userSaving()
     {
-        return $this->belongsTo(Saving::class);
+        return $this->belongsTo(Saving::class, 'saving_id', 'id');
     }
 
     public function category()

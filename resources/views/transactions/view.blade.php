@@ -61,9 +61,17 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="attchment" class="col-sm-2 col-form-label">Attachment</label>
+            <label for="attachment" class="col-sm-2 col-form-label">Attachment</label>
             <div class="col-sm-10">
-                <p class="form-control-plaintext" id="attchment">{{ $transaction->attchment }}</p>
+                <p class="form-control-plaintext" id="attachment">
+                    @if($transaction->attachment)
+                        <a href="{{ asset($transaction->attachment) }}">
+                            View Attachment
+                        </a>
+                    @else
+                        No attachment
+                    @endif
+                </p>
             </div>
         </div>
         <div class="form-group row">

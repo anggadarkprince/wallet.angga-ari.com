@@ -80,7 +80,7 @@ class TransactionsController extends Controller
 
         try {
             if ($request->has('attachment')) {
-                $path = $request->file('attachment')->storePublicly('attachment');
+                $path = $request->file('attachment')->storePublicly('attachments/' . $request->user()->id);
                 $transaction['attachment'] = $path;
             }
 
@@ -107,22 +107,24 @@ class TransactionsController extends Controller
     public function show($id)
     {
         $transaction = Transaction::with(['userSaving', 'category'])->findOrFail($id);
-        $url = asset('storage/' . $transaction['attachment']);
-        dd($url);
         return view('transactions.view', compact('transaction'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param Request $request
+     * @param int $id
      * @return Response
      */
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
-        $transaction = Transaction::with(['saving', 'category'])->findOrFail($id);
+        $categories = $request->user()->categories;
+        $savings = $request->user()->userSavings;
 
-        return view('transactions.edit', compact('transaction'));
+        $transaction = Transaction::with(['userSaving', 'category'])->findOrFail($id);
+
+        return view('transactions.edit', compact('transaction', 'categories', 'savings'));
     }
 
     /**
